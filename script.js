@@ -1,2 +1,2 @@
-var initValue = document.getElementById("valorInit");
+var initValue = document.getElementById("calculadora");
 console.log(initValue)
