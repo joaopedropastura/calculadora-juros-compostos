@@ -12,6 +12,7 @@ link referencia: https://www.mobills.com.br/calculadoras/calculadora-juros-compo
 
 https://www.tabnine.com/academy/javascript/get-value-of-input/
 
+https://pt.linkedin.com/pulse/f%C3%B3rmulas-e-c%C3%B3digo-para-c%C3%A1lculo-de-valor-futuro-em-javascript-borba
 
 gradient css:
 
