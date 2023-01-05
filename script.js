@@ -1,18 +1,20 @@
 
 function getVal() {
-    const initValue = document.getElementById("valorInit").value
-    const monthValue = document.getElementById("valorInter").value
-    const taxValue = document.getElementById("tax").value
-    const month = document.getElementById("month").value
+    const initValue = parseInt($("#valorInit").val())
+    const monthValue = parseInt($("#valorInter").val())
+    const taxValue =  parseInt($("#tax").val())
+    const month = parseInt($("#month").val())
     calculaMontante(initValue, monthValue, month, taxValue)
 }
 
 function calculaMontante(init, monthValue, month, tax) {
     console.log(init, monthValue, month, tax)
-    let montante = init
+
+    tax = ((Math.pow((1+(tax/100)),(1/12)))-1)*100
     tax = tax/100
-    montanteFinal += montante *Math.pow((1+tax), month)
-    console.log(montanteFinal)
+    let fv = init * (Math.pow(1+tax, month)) + (monthValue *(Math.pow(1+tax, month) - 1)/ tax)
+
+    console.log(fv)
 }
 
 
