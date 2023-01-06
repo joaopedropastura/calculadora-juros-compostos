@@ -40,19 +40,26 @@
 			<span>taxa de juros</span>
 			<div class="input-group mb-3">
 				<span class="input-group-text" id="basic-addon1">%</span>
-				<input type="text" class="form-control" id="tax" placeholder="0,00" aria-label="Username" aria-describedby="basic-addon1">
-				<button type="button" class="btn btn-outline-secondary">anual</button>
+				<input type="text" class="form-control w-50" id="tax" placeholder="0,00" aria-label="Username" aria-describedby="basic-addon1">
+				<select id="opt-taxa" class="form-select w-25">
+					<option>
+						Anual
+					</option>
+					<option>
+						Mensal
+					</option>
+				</select>
+				<!-- <button type="button" class="btn btn-outline-secondary">anual</button>
 				<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
 					<span class="visually-hidden">Toggle Dropdown</span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a class="dropdown-item" href="#">anual</a></li>
 					<li><a class="dropdown-item" href="#">mensal</a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
-		<button type="button" onclick="getVal()">OK</button>
-		<button type="button" class="btn btn-success" onclick="getVal()">Success</button>
+		<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
 
 		<div id="result"><p>Valor final total: </p> </div>
 	</main>
