@@ -1,0 +1,19 @@
+.inputGrup{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    height: 10vh;
+}
+main{
+    height: 80vh;
+}
+footer{
+    height: 10vh;
+}
