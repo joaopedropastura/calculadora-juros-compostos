@@ -13,16 +13,36 @@
 		<h1>Calculadora de juros compostos</h1>
 	</header>
 	<main>
-		<p>Aporte inicial</p>R$<input type="number" name="init" id="valorInit" placeholder="valor">
-		<p>Aportes mensais</p>R$<input type="number" name="month" id="valorInter">
-		<p>taxa de juros</p>%<input type="number" name="taxa" id="tax">
-		<p>Periodo</p><input type="number" name="months" id="month">
-		<select name="periodo" id="periodo">
-			<option value="month">meses</option>
-			<option value="year">anos</option>
-		</select>
+
+		<div>
+			<span>Aporte inicial</span>
+			<span>R$</span>
+			<input type="tel" name="init" id="valorInit" placeholder="0,00">
+		</div>
+		<div>
+			<span>Aportes mensais</span>
+			<span>R$</span>
+			<input type="tel" name="month" id="valorInter" placeholder="0,00">
+		</div>
+		<div>
+			<span>taxa de juros</span>
+			<span>%</span>
+			<input type="tel" name="taxa" id="tax" placeholder="0,00">
+			<select name="periodo" id="periodoTax">
+				<option value="month">mensal</option>
+				<option value="year">anual</option>
+			</select>
+		</div>
+		<div>
+			<span>Periodo</span>
+			<input type="number" name="months" id="month" placeholder="0">
+			<select name="periodo" id="periodo">
+				<option value="month">meses</option>
+				<option value="year">anos</option>
+			</select>
+		</div>
 		<button type="button" onclick="getVal()">OK</button>
-		
+
 		<div id="result"><p>Valor final total: </p> </div>
 	</main>
 	<footer></footer>

@@ -11,10 +11,8 @@ function calculaMontante(init, monthValue, month, tax) {
     console.log(init, monthValue, month, tax)
     let montanteFinal = init
     tax = tax/100
-    for (i = 0; i < month; i++)
-    {   
-        montanteFinal += monthValue *Math.pow((1+tax), )
-    }
+    montanteFinal += monthValue *Math.pow((1+tax), )
+
     console.log(montanteFinal)
 }
 
