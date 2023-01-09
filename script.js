@@ -34,17 +34,22 @@ fetch("https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados?formato=json").the
 //dolar
 async function getDollarValue(){
     var result = await fetch(urlCoins)
-
     var dolarData = await result.json()
+
     console.log(dolarData)
+    
+    var bids = dolarData.map(d => d.bid)
+    console.log(bids)
 
-    dolarData.map((dolToDay) => {
-        var div = $("#coins")
-        var content = $("<span></span>")
+    // dolarData.map(p.
 
-        console.log(dolToDay.ask)
+    // dolarData.map((dolToDay) => {
+    //     var div = $("#coins")
+    //     var content = $("<span></span>")
 
-    })
+    //     console.log(dolToDay.ask)
+
+    // })
 }
 
 getDollarValue()
