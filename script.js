@@ -37,9 +37,12 @@ async function getDollarValue(){
     var dolarData = await result.json()
 
     console.log(dolarData)
+    console.log(dolarData.USDBRL.bid)
+    console.log(dolarData.EURBRL.bid)
+    console.log(dolarData.BTCBRL.bid)
     
-    var bids = dolarData.map(d => d.bid)
-    console.log(bids)
+    // var bids = dolarData.map(d => d.bid)
+    // console.log(bids)
 
     // dolarData.map(p.
 
