@@ -26,8 +26,8 @@ function calculaMontante(init, monthValue, month, tax, opt_taxa) {
     console.log(valorInvestido)
     console.log(taxAcumulado)
     console.log(montanteFinal)
-
-    $result.text($result.text() + montanteFinal)
+    $result.empty()
+    $result.text("Valor final: " + montanteFinal)
 }
 
 //taxa de juros selic
