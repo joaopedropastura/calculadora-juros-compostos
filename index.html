@@ -14,9 +14,11 @@
 		<h1>Calculadora de juros compostos</h1>
 	</header>
 	<main>
-		<div class="inputGrup">
-			<span>Aportes inicial</span>
-			<div class="input-group mb-3" >
+		<div id="content">
+
+			<div class="inputGrup">
+				<span>Aportes inicial</span>
+				<div class="input-group mb-3" >
 				<span class="input-group-text" id="basic-addon1">R$</span>
 				<input type="text" class="form-control" id="valorInit" placeholder="0,00" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
@@ -51,18 +53,19 @@
 					<option value="">CDI</option>
 				</select>
 				<!-- <button type="button" class="btn btn-outline-secondary">anual</button>
-				<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">anual</a></li>
-					<li><a class="dropdown-item" href="#">mensal</a></li>
-				</ul> -->
+					<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="visually-hidden">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">anual</a></li>
+						<li><a class="dropdown-item" href="#">mensal</a></li>
+					</ul> -->
+				</div>
 			</div>
+			<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
+			
+			<div id="result"><p id="resultado">Valor final total: </p> </div>
 		</div>
-		<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
-
-		<div id="result"><p>Valor final total: </p> </div>
 	</main>
 	<footer>
 		<div id="coins"></div>

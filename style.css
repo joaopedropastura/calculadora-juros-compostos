@@ -10,10 +10,22 @@ body{
 
 header{
     height: 10vh;
+    padding: 4vh;
 }
 main{
     height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 footer{
     height: 10vh;
 }
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+}
+
