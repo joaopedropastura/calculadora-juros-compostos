@@ -15,7 +15,6 @@
 	</header>
 	<main>
 		<div id="content">
-
 			<div class="inputGrup">
 				<span>Aportes inicial</span>
 				<div class="input-group mb-3" >
@@ -35,7 +34,7 @@
 			<span>Período</span>
 			<div class="input-group mb-3">
 				<!-- <span class="input-group-text" id="basic-addon1">R$</span> -->
-				<input type="text" class="form-control" id="month" placeholder="0,00" aria-label="Username" aria-describedby="basic-addon1">
+				<input type="text" class="form-control" id="month" placeholder="Digite o período em meses" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
 		</div>
 		<div class="inputGrup">
@@ -63,8 +62,9 @@
 				</div>
 			</div>
 			<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
-			
-			<div id="result"><p id="resultado">Valor final total: </p> </div>
+			<div><p id="investido">Valor Investido: </p> </div>
+			<div><p id="rendimento">Juros acumulados: </p> </div>
+			<div><p id="resultado">Valor final total: </p> </div>
 		</div>
 	</main>
 	<footer>
