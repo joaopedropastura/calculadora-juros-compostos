@@ -43,13 +43,9 @@
 				<span class="input-group-text" id="basic-addon1">%</span>
 				<input type="text" class="form-control w-50" id="tax" placeholder="0,00" aria-label="Username" aria-describedby="basic-addon1">
 				<select id="opt-taxa" class="form-select w-25">
-					<option>
-						Anual
-					</option>
-					<option>
-						Mensal
-					</option>
-					<option value="">CDI</option>
+					<option value="anual">Anual</option>
+					<option value="mensal">Mensal</option>
+					<option value="cdi">CDI</option>
 				</select>
 				<!-- <button type="button" class="btn btn-outline-secondary">anual</button>
 					<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,9 +58,11 @@
 				</div>
 			</div>
 			<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
-			<div><p id="investido">Valor Investido: </p> </div>
-			<div><p id="rendimento">Juros acumulados: </p> </div>
-			<div><p id="resultado">Valor final total: </p> </div>
+			<div id="results">
+				<div><span class="indi-values" id="investido"></span> </div>
+				<div><span class="indi-values" id="rendimento"></span> </div>
+				<div><span class="indi-values" id="resultado"></span> </div>
+			</div>
 		</div>
 	</main>
 	<footer>
