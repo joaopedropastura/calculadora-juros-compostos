@@ -58,14 +58,28 @@
 				</div>
 			</div>
 			<button type="button" class="btn btn-success" onclick="getVal()">Calcular</button>
-			<div id="results">
-				<div><span class="indi-values" id="investido"></span> </div>
-				<div><span class="indi-values" id="rendimento"></span> </div>
-				<div><span class="indi-values" id="resultado"></span> </div>
+		</div>
+		<div id="results">
+			<div class="indi-values">
+				<span class="result-text">Valor total investido: </span>
+				<b id="investido"> </b> 
+			</div>
+			<div class="indi-values">
+				<span class="result-text">Juros acumulados: </span>
+				<b id="rendimento"> </b>
+			</div>
+			<div class="indi-values">
+				<span class="result-text">Ganhos: </span>
+				<b id="ganhos"> </b>
+			</div>
+			<div class="indi-values">
+				<span class="result-text">Valor total final: </span>
+				<b id="resultado"> </b> 
 			</div>
 		</div>
 	</main>
 	<footer>
+		<div id="showCharts"></div>
 		<div id="coins"></div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

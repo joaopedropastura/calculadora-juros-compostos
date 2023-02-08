@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 .inputGrup{
     display: flex;
     flex-direction: column;
@@ -6,18 +10,23 @@
 
 body{
     margin: 0;
+    background-color: whitesmoke;
 }
 
 header{
     height: 10vh;
-    padding: 4vh;
+    padding: 2vh 3vh;
 }
 main{
     height: 80vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
 }
+
 footer{
     height: 10vh;
 }
@@ -25,13 +34,25 @@ footer{
 #content{
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    justify-content: center;
+    width: 85vw;
+    padding-top: 10vh;
 }
 
 #results{
+    width: 85%;
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 1.5vh;
+}
+
+
+.result-text{
+    display: none;
+}
+
+.indi-values{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

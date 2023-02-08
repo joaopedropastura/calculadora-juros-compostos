@@ -14,6 +14,8 @@ function calculaMontante(init, monthValue, month, tax, opt_taxa) {
     const $result = $("#resultado")
     const $juros = $("#rendimento")
     const $investido = $("#investido")
+    const $ganhos = $("#ganhos")
+    const $textResult = $(".result-text")
 
     init = isNaN(init) ? 0 : init
     monthValue = isNaN(monthValue) ? 0 : monthValue
@@ -26,13 +28,15 @@ function calculaMontante(init, monthValue, month, tax, opt_taxa) {
     let montanteFinal = init * (Math.pow(1 + tax, month)) + (monthValue *(Math.pow(1 + tax, month) - 1)/ tax)
     let valorInvestido = init + (monthValue * month)
     let taxAcumulado = montanteFinal - valorInvestido
-    console.log(valorInvestido)
-    console.log(taxAcumulado)
-    console.log(montanteFinal)
+    // console.log(valorInvestido)
+    // console.log(taxAcumulado)
+    // console.log(montanteFinal)
+    console.log($textResult.css({"display" : "flex"}))
+    $investido.text(valorInvestido.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    $juros.text(taxAcumulado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    $ganhos.text(((taxAcumulado/valorInvestido)*100).toFixed(2) + "%") 
+    $result.text( montanteFinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
 
-    $investido.text("Valor Investido: " + valorInvestido.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-    $juros.text("Juros acumulados: " + taxAcumulado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-    $result.text("Valor final: " + montanteFinal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
 }
 
 //taxa de juros selic
@@ -45,10 +49,10 @@ async function getDollarValue(){
     var result = await fetch(urlCoins)
     var dolarData = await result.json()
 
-    console.log(dolarData)
-    console.log(dolarData.USDBRL.bid)
-    console.log(dolarData.EURBRL.bid)
-    console.log(dolarData.BTCBRL.bid)
+    // console.log(dolarData)
+    // console.log(dolarData.USDBRL.bid)
+    // console.log(dolarData.EURBRL.bid)
+    // console.log(dolarData.BTCBRL.bid)
     
     // var bids = dolarData.map(d => d.bid)
     // console.log(bids)
