@@ -31,7 +31,7 @@ function calculaMontante(init, monthValue, month, tax, opt_taxa) {
     // console.log(valorInvestido)
     // console.log(taxAcumulado)
     // console.log(montanteFinal)
-    console.log($textResult.css({"display" : "flex"}))
+    $textResult.css({"display" : "flex"})
     $investido.text(valorInvestido.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
     $juros.text(taxAcumulado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
     $ganhos.text(((taxAcumulado/valorInvestido)*100).toFixed(2) + "%") 
@@ -48,11 +48,23 @@ fetch("https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados?formato=json").the
 async function getDollarValue(){
     var result = await fetch(urlCoins)
     var dolarData = await result.json()
+    const $dolar = $("#usd")
+    const $euro = $("#eur")
+    const $bitCoin = $("#btc")
+    let dolValue = parseFloat(dolarData.USDBRL.bid)
+    let eurValue = parseFloat(dolarData.EURBRL.bid)
+    let btcValue = parseFloat(dolarData.BTCBRL.bid)
 
-    // console.log(dolarData)
-    // console.log(dolarData.USDBRL.bid)
-    // console.log(dolarData.EURBRL.bid)
-    // console.log(dolarData.BTCBRL.bid)
+
+    $dolar.text(dolValue.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    $euro.text(eurValue.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    $bitCoin.text(btcValue.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+
+
+    console.log(dolarData)
+    console.log(dolarData.USDBRL.bid)
+    console.log(dolarData.EURBRL.bid)
+    console.log(dolarData.BTCBRL.bid)
     
     // var bids = dolarData.map(d => d.bid)
     // console.log(bids)

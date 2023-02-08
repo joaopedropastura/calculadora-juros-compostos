@@ -1,5 +1,7 @@
 *{
     margin: 0;
+    font-family: Poppins, sans-serif;
+
 }
 
 .inputGrup{
@@ -29,13 +31,19 @@ main{
 
 footer{
     height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 #content{
     display: flex;
     flex-direction: column;
     width: 85vw;
-    padding-top: 10vh;
+    padding-top: 8vh;
 }
 
 #results{
@@ -43,7 +51,7 @@ footer{
     height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 1.5vh;
+    gap: 1vh;
 }
 
 
@@ -55,4 +63,21 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+
+#showCharts{
+    height: 15%;
+    width: 85%;
+    background-color: blue;
+}
+
+#coins{
+    width: 85%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
 }
