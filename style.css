@@ -57,7 +57,7 @@ footer{
 
 .result-text{
     display: none;
-    
+
 }
 
 .indi-values{
@@ -70,8 +70,6 @@ footer{
     height: 15%;
     width: 85%;
     /* background-color: blue; */
-    display: flex;
-    flex-direction: column;
 }
 
 #coins{
