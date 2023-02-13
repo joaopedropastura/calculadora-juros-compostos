@@ -19,6 +19,7 @@ header{
     height: 10vh;
     padding: 2vh 3vh;
 }
+
 main{
     height: 80vh;
     width: 100vw;
@@ -54,7 +55,6 @@ footer{
     gap: 1vh;
 }
 
-
 .result-text{
     display: none;
 }
@@ -64,8 +64,6 @@ footer{
     flex-direction: row;
     justify-content: space-between;
 }
-
-
 
 #showCharts{
     height: 15%;
